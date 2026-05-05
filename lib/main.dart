@@ -41,7 +41,7 @@ class _MainAppState extends State<MainApp> {
   static const Color _roxoMedio = Color.fromARGB(255, 219, 176, 204);
   static const Color _cinza = Color.fromARGB(255, 210, 184, 184);
 
-  // ✅ LISTA FIXA DE FRASES
+  
   final List<String> _frases = [
     "Um passo pequeno ainda é um passo, não desista!",
     "Os nossos sonhos merecem nossa disciplina, persista!",
@@ -55,7 +55,7 @@ class _MainAppState extends State<MainApp> {
     "Se você quer ser, é porque algo em você já é!"
   ];
 
-  // ✅ SORTEIO SIMPLES (SEMPRE FUNCIONA)
+  
   void _sortear() {
     final int indice = _random.nextInt(_frases.length);
     final String frase = _frases[indice];
@@ -78,7 +78,7 @@ class _MainAppState extends State<MainApp> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
 
-            // ✅ IMAGEM GRANDE (igual ao seu app)
+            
             ClipRRect(
               borderRadius: BorderRadius.circular(24),
               child: Image.network(
@@ -105,7 +105,7 @@ class _MainAppState extends State<MainApp> {
 
             const SizedBox(height: 30),
 
-            // ✅ BOTÃO (AGORA SEMPRE ATIVO)
+            
             ElevatedButton.icon(
               onPressed: _sortear,
               icon: const Icon(Icons.auto_awesome),
@@ -133,7 +133,7 @@ class _MainAppState extends State<MainApp> {
     );
   }
 
-  // ✅ MESMO DIALOG (quase igual ao seu)
+  
   void _mostrarResultado(String resultado) {
     showDialog(
       context: context,
